@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Policies
+PUBLIC "-//OpenSSO Policy DTD//EN"
+"jar://com/sun/identity/policy/policyAdmin.dtd"
+>
+<Policies>
+<Policy name="URL Policy" referralPolicy="false" active="true" >
+<Rule name="d">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/urlpolicyservlet" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Subjects name="Subjects:1241215458885fts9s78=" description="">
+<Subject name="dd" type="AMIdentitySubject" includeType="inclusive">
+<AttributeValuePair><Attribute name="Values"/><Value>id=customer,ou=group,dc=opensso,dc=java,dc=net</Value>
+</AttributeValuePair>
+</Subject>
+</Subjects>
+</Policy>
+<Policy name="J2EE Policy" referralPolicy="false" active="true" >
+<Rule name="www">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/jsp/*" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Rule name="ee">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/invokerservlet" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Rule name="eee">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/protectedservlet" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Rule name="ddd">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/securityawareservlet" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Rule name="deed">
+<ServiceName name="iPlanetAMWebAgentService" />
+<ResourceName name="http://payslip.packt-services.net:7070/agentsample/unprotectedservlet" />
+<AttributeValuePair>
+<Attribute name="POST" />
+<Value>allow</Value>
+</AttributeValuePair>
+<AttributeValuePair>
+<Attribute name="GET" />
+<Value>allow</Value>
+</AttributeValuePair>
+</Rule>
+<Subjects name="Subjects:1241214736309TdiohVM=" description="">
+<Subject name="dssd" type="AuthenticatedUsers" includeType="inclusive">
+</Subject>
+</Subjects>
+</Policy>
+</Policies>
